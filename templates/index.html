@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeEats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>SafeEats Ingredient Checker</h1>
+        <form id="ingredient-form">
+            <textarea id="ingredients" placeholder="Paste or type ingredients here..."></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <div id="summary"></div>
+            <div id="safe"></div>
+            <div id="caution"></div>
+            <div id="avoid"></div>
+            <div id="disclaimers"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
